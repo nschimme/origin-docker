@@ -1,7 +1,6 @@
-FROM ubuntu:16.04
+FROM ubuntu:latest
 
-RUN apt-get update
-RUN apt-get install -y dnsmasq
+RUN apt-get update && apt-get install -y dnsmasq
 
 ADD dnsmasq.conf /dnsmasq-template.conf
 ADD start-dnsmasq.sh /usr/bin/

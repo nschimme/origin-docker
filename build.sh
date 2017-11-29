@@ -34,5 +34,5 @@ cd nginx*
             --with-http_slice_module
 
 
-make -j 8 
+make -j `nproc --all`
 make install
